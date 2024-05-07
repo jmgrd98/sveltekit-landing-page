@@ -2,6 +2,7 @@
     import '../app.css';
     import Cta from '../components/CTA.svelte';
     import Footer from '../components/Footer.svelte';
+    import Header from '../components/Header.svelte';
     import { openModal } from '../store';
     
     let y: any;
@@ -36,6 +37,11 @@
         <div class="flex flex-col items-center justify-center">
             <Cta />
         </div>
+    </div>
+{/if}
+{#if y > outerHeight}
+    <div class="bg-white fixed top-0 left-0 w-full flex flex-col z-20 px-4 fadeIn">
+        <Header />
     </div>
 {/if}
 <slot></slot>
