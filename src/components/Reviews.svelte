@@ -1,6 +1,7 @@
 <script lang="ts">
     import ReviewCard from "./ReviewCard.svelte";
 import SectionWrapper from "./SectionWrapper.svelte";
+    import Stars from "./Stars.svelte";
     let lim: boolean = true;
     let reviewsList: any[] = [
         {
@@ -88,6 +89,15 @@ import SectionWrapper from "./SectionWrapper.svelte";
                     <ReviewCard {review} {index} />
                 {/each}
             </div>
+        </div>
+        <button on:click={() => lim = !lim} class="specialBtn">
+            <p>{lim ? "Show More" : "Show Less"}</p>
+        </button>
+        <div class="flex flex-col gap-10">
+            <p class="mx-auto text-lg sm:text-xl md:text-2xl font-semibold">
+                Trusted by 1,349 Swoldiers
+            </p>
+            <Stars />
         </div>
     </div>
 </SectionWrapper>
