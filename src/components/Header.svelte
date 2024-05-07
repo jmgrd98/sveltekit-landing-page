@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { openModal } from "../store";
+
+
 
 </script>
 
@@ -8,7 +11,7 @@
             <h1 class="font-semibold">Swoley <span class="text-indigo-400">Moley</span></h1>
         </a>
 
-        <button class="md:hidden grid place-items-center">
+        <button on:click={() => openModal.set(true)} class="md:hidden grid place-items-center">
             <i class="fa-solid fa-bars"></i>
         </button>
 

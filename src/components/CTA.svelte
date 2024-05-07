@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let dark: boolean;
+    export let dark: boolean = false;
 </script>
 
 <div class="flex items-center gap-4">
